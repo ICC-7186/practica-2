@@ -101,13 +101,33 @@ Tomando como plantilla la clase `Operaciones` debes de completar el cuerpo de lo
 - ocurrenciasDe
 - decimalABinario
 
-La clase debe de estar guardada en un paquete llamado `operaciones` y no es válido utilizar herramientas que resulvan el problema de forma directa, solo puedes utilizar estructuras de control.
+La clase debe de estar guardada en un paquete llamado `operaciones` y no es válido utilizar herramientas que resulvan el problema de forma directa, solo puedes utilizar estructuras de control. Además, debes de generar un archivo de prueba `Practica2` donde se vea el funcionamiento de los métodos implementados.
 
 ### Pruebas Unitarias
 
-Debes de implementar un archivo donde enlistes diferentes pruebas unitarias donde probarás que todos los métodos anteriores funcionan de forma correcta.
+Debes de implementar un archivo donde enlistes diferentes pruebas unitarias llamado `TestOperaciones` donde probarás que todos los métodos anteriores funcionan de forma correcta.
 
-También debes realizar un archivo `pom.xml` que se debe de encargar de ejecutar todo el proyecto.
+También debes completar el archivo `pom.xml` de forma correcta pues debe de encargar de ejecutar todo el proyecto.
+
+La estructua del proyecto debe ser la siguiente:
+
+```
+practica-2/
+    |_ src/
+        |_ main/
+        |    |_ java/
+        |        |_ operaciones/
+        |            |_ Operaciones.java
+        |            |_ Practica2.java
+        |_ test/
+        |    |_ java/
+        |        |_ operaciones/
+        |            |_ test
+        |                |_ TestOperaciones.java
+        |_ pom.xml
+```
+
+Para poder compilar y ejecutar todos los comandos, debes de ubicarte en la carpeta `practica2/`.
 
 Para compilar, debes usar el siguiente comando:
 
