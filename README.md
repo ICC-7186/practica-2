@@ -4,7 +4,146 @@ Nombre:
 
 NumCuenta:
 
-En esta práctica se realizarán los pruebas unitarias sencillas para un programa intuitivo haciendo uso de estructuras de control, así como el uso de la herramienta Maven para su ejecución por medio de un archivo `pom.xml`.
+En esta práctica se realizarán los pruebas unitarias sencillas para un programa intuitivo haciendo uso de estructuras de control, así como el uso de la herramienta Maven para su ejecución por medio de un archivo `pom.xml`. A continuación se muestra un ejemplo:
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>ejemplo</groupId>
+  <artifactId>ejemplo</artifactId>
+  <version>ICC</version>
+  <packaging>jar</packaging>
+
+  <name>Ejemplo MVN</name>
+  <description>
+   Ejemplo sencillo del uso de mave y junit
+  </description>
+ <url>https://classroom.google.com/c/Nzg2NzA1NjU3MzU4</url>
+  <organization>
+    <name>Ramsés Antonio López Soto</name>
+    <url></url>
+  </organization>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.release>11</maven.compiler.release>
+  </properties>
+
+  <build>
+    <plugins>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <version>3.0.0-M3</version>
+        <executions>
+          <execution>
+            <id>enforce-maven</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <requireMavenVersion>
+                  <version>3.1.0</version>
+                </requireMavenVersion>
+              </rules>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <compilerArgument>-Xlint:deprecation</compilerArgument>
+          <compilerArgument>-Xlint:unchecked</compilerArgument>
+          <debug>true</debug>
+          <debuglevel>lines,vars,source</debuglevel>
+          <showDeprecation>true</showDeprecation>
+          <showWarnings>true</showWarnings>
+        </configuration>
+      </plugin>
+
+      <plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-jar-plugin</artifactId>
+        <version>3.2.0</version>
+	<configuration>
+	  <archive>
+	    <manifest>
+	      <mainClass>ejemplo.Main</mainClass>
+	    </manifest>
+	  </archive>
+	</configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>3.9.1</version>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>3.1.1</version>
+      </plugin>
+
+    </plugins>
+
+    <finalName>ejemplo-mvn</finalName>
+  </build>
+
+  <reporting>
+    <plugins>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.2.0</version>
+        <configuration>
+          <source>11</source>
+          <charset>UTF-8</charset>
+          <author>false</author>
+          <version>false</version>
+          <use>true</use>
+          <windowtitle>Introducción a Ciencias de la Computación</windowtitle>
+          <doctitle><![CDATA[<h1>Introducción a Ciencias de la Computación</h1>]]></doctitle>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-report-plugin</artifactId>
+        <version>3.0.0-M3</version>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jxr-plugin</artifactId>
+        <version>3.0.0</version>
+      </plugin>
+
+    </plugins>
+  </reporting>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version>
+    </dependency>
+  </dependencies>
+
+</project>
+```
 
 ## Autores 😊
 * **Salvador López Mendoza** - *Titular* - [Correo](slm@ciencias.unam.mx)
