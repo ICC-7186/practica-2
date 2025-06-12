@@ -1,4 +1,4 @@
-# Práctica 2: Estructuras de Control y . 📌
+# Práctica 2: Estructuras de Control y Pruebas Unitarias. 📌
 
 Nombre:
 
